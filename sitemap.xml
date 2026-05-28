@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/0.9">
+  <url>
+    <loc>https://yohand-byte.github.io/yoyo-el-patron-site/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yohand-byte.github.io/yoyo-el-patron-site/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yohand-byte.github.io/yoyo-el-patron-site/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yohand-byte.github.io/yoyo-el-patron-site/"/>
+    <image:image>
+      <image:loc>https://yohand-byte.github.io/yoyo-el-patron-site/og-image.jpg</image:loc>
+      <image:title>Yoyo El Patron, rappeur français afrotrap Paris 2026</image:title>
+      <image:caption>Yoyo El Patron, capuche baissée, néon bleu et rose, Paris 2026</image:caption>
+    </image:image>
+  </url>
+</urlset>
