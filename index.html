@@ -9,6 +9,12 @@
 <meta property="og:description" content="Pas de visage. Que du son. Capuche baissée, Paris néon." />
 <meta property="og:image" content="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/62/77/90/6277904c-11d8-ae47-ce7c-845c28aa6031/artwork.jpg/1200x1200bb.jpg" />
 <meta property="og:type" content="music.musician" />
+<link rel="icon" href="favicon.ico" sizes="any" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<meta name="theme-color" content="#06060c" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -131,7 +137,7 @@
     <div class="wrap">
       <div class="hero">
         <div class="reveal in">
-          <span class="eyebrow"><span class="dot"></span> Nouveau · Elle est Guaaapaaa</span>
+          <span class="eyebrow"><span class="dot"></span> Nouveau · <span id="latest-name">Elle est Guaaapaaa</span></span>
           <h1 class="title">YOYO<br>EL PATRON</h1>
           <p class="tagline">Pas de visage. Que du son.<br>Capuche baissée, Paris néon.</p>
           <div class="cta">
@@ -141,7 +147,7 @@
         </div>
         <div class="hero-cover reveal in">
           <span class="tag">DERNIÈRE SORTIE</span>
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/62/77/90/6277904c-11d8-ae47-ce7c-845c28aa6031/artwork.jpg/600x600bb.jpg" alt="Elle est Guaaapaaa — Yoyo El Patron" loading="eager" />
+          <img id="hero-img" src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/62/77/90/6277904c-11d8-ae47-ce7c-845c28aa6031/artwork.jpg/600x600bb.jpg" alt="Elle est Guaaapaaa — Yoyo El Patron" loading="eager" />
         </div>
       </div>
     </div>
@@ -151,18 +157,18 @@
     <div class="wrap">
       <div class="reveal">
         <div class="kicker">Dernière sortie</div>
-        <h2 class="h2">Elle est Guaaapaaa</h2>
+        <h2 class="h2" id="sortie-title">Elle est Guaaapaaa</h2>
       </div>
       <div class="featured reveal">
         <div class="cover">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/62/77/90/6277904c-11d8-ae47-ce7c-845c28aa6031/artwork.jpg/600x600bb.jpg" alt="Elle est Guaaapaaa" loading="lazy" />
+          <img id="featured-img" src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/62/77/90/6277904c-11d8-ae47-ce7c-845c28aa6031/artwork.jpg/600x600bb.jpg" alt="Elle est Guaaapaaa" loading="lazy" />
         </div>
         <div>
           <span class="new-badge">● NOUVEAU SINGLE · 2026</span>
           <p style="color:var(--muted);margin-top:0">Le dernier titre de Yoyo El Patron — afrotrap mélodique, prod nocturne et refrain qui colle. Disponible sur toutes les plateformes.</p>
           <div class="cta" style="margin-top:18px">
             <a class="btn btn-primary" href="https://t-sml.mtrbio.com/public/smartlink/yoyoelpatron" target="_blank" rel="noopener">▶ Écouter maintenant</a>
-            <a class="btn btn-ghost" href="https://music.apple.com/us/album/elle-est-guaaapaaa/6779067225?i=6779067226" target="_blank" rel="noopener">Apple Music ↗</a>
+            <a class="btn btn-ghost" id="featured-apple" href="https://music.apple.com/us/album/elle-est-guaaapaaa/6779067225?i=6779067226" target="_blank" rel="noopener">Apple Music ↗</a>
           </div>
         </div>
       </div>
@@ -175,7 +181,7 @@
         <div class="kicker">Discographie</div>
         <h2 class="h2">La musique</h2>
       </div>
-      <div class="grid">
+      <div class="grid" id="disco-grid">
         <div class="track reveal">
           <div class="art">
             <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/62/77/90/6277904c-11d8-ae47-ce7c-845c28aa6031/artwork.jpg/300x300bb.jpg" alt="Elle est Guaaapaaa" loading="lazy" />
@@ -305,27 +311,96 @@
   </footer>
 
   <script>
-    // Apparition au scroll
+    // ---- Apparition au scroll ----
     const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-    document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
+    const observeReveals=()=>document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
+    observeReveals();
 
-    // Karaoké : la ligne au centre s'illumine
+    // ---- Karaoké : la ligne au centre s'illumine ----
     const ly=new IntersectionObserver((es)=>es.forEach(e=>{e.target.classList.toggle('active', e.isIntersecting);}),{rootMargin:'-48% 0px -48% 0px',threshold:0});
     document.querySelectorAll('.lyric-line').forEach(l=>ly.observe(l));
 
-    // Lecteur d'extraits (30s, Apple Music)
+    // ---- Lecteur d'extraits (30s) ----
     const player=document.getElementById('player');
     let current=null;
-    document.querySelectorAll('.play-btn').forEach(btn=>{
-      btn.addEventListener('click',()=>{
-        const src=btn.getAttribute('data-src');
-        if(current===btn && !player.paused){player.pause();btn.classList.remove('playing');btn.querySelector('i').textContent='▶';return;}
-        if(current && current!==btn){current.classList.remove('playing');current.querySelector('i').textContent='▶';}
-        player.src=src;player.play().catch(()=>{});
-        btn.classList.add('playing');btn.querySelector('i').textContent='⏸';current=btn;
+    function bindPlay(){
+      document.querySelectorAll('.play-btn').forEach(btn=>{
+        if(btn._bound) return; btn._bound=1;
+        btn.addEventListener('click',()=>{
+          const src=btn.getAttribute('data-src');
+          if(!src) return;
+          if(current===btn && !player.paused){player.pause();btn.classList.remove('playing');btn.querySelector('i').textContent='▶';return;}
+          if(current && current!==btn){current.classList.remove('playing');current.querySelector('i').textContent='▶';}
+          player.src=src;player.play().catch(()=>{});
+          btn.classList.add('playing');btn.querySelector('i').textContent='⏸';current=btn;
+        });
       });
-    });
+    }
+    bindPlay();
     player.addEventListener('ended',()=>{if(current){current.classList.remove('playing');current.querySelector('i').textContent='▶';}});
+
+    // ---- AUTO-UPDATE : sorties récupérées en direct depuis l'API iTunes (CORS ok) ----
+    // Pas de rebuild ni de maintenance : à chaque visite, la page lit tes dernières
+    // sorties Apple Music/iTunes et met à jour la « dernière sortie » + la discographie.
+    const ARTIST_ID='1896699539';
+    const spo=n=>'https://open.spotify.com/search/'+encodeURIComponent('Yoyo El Patron '+n);
+    const ytm=n=>'https://music.youtube.com/search?q='+encodeURIComponent('Yoyo El Patron '+n);
+    const bigger=(u,s)=>u?u.replace('100x100bb',s+'x'+s+'bb'):'';
+    const esc=s=>(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    const MOIS=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+    const dateFR=d=>{const dt=new Date(d);return (d&&!isNaN(dt))?`Single · ${dt.getDate()} ${MOIS[dt.getMonth()]} ${dt.getFullYear()}`:'Single';};
+
+    async function loadReleases(){
+      try{
+        const res=await fetch(`https://itunes.apple.com/lookup?id=${ARTIST_ID}&entity=song&sort=recent&limit=40`,{cache:'no-store'});
+        const data=await res.json();
+        const seen=new Set(), tracks=[];
+        for(const t of (data.results||[])){
+          if(t.kind!=='song'&&t.wrapperType!=='track') continue;
+          const key=(t.trackName||'').toLowerCase().trim();
+          if(!key||seen.has(key)) continue;
+          seen.add(key); tracks.push(t);
+        }
+        if(!tracks.length) return;               // secours : on garde le contenu statique
+        renderLatest(tracks[0]);
+        renderGrid(tracks.slice(0,12));
+      }catch(e){ /* hors-ligne / bloqué -> le HTML statique reste affiché */ }
+    }
+
+    function renderLatest(t){
+      const name=t.trackName||'', cover=bigger(t.artworkUrl100,600), apple=t.trackViewUrl||'#';
+      const set=(id,fn)=>{const el=document.getElementById(id); if(el) fn(el);};
+      set('latest-name',el=>el.textContent=name);
+      set('sortie-title',el=>el.textContent=name);
+      set('hero-img',el=>{if(cover){el.src=cover;el.alt=name;}});
+      set('featured-img',el=>{if(cover){el.src=cover;el.alt=name;}});
+      set('featured-apple',el=>el.href=apple);
+      if(name) document.title=`YOYO EL PATRON — ${name}`;
+    }
+
+    function renderGrid(tracks){
+      const g=document.getElementById('disco-grid'); if(!g) return;
+      g.innerHTML=tracks.map((t,i)=>{
+        const name=esc(t.trackName||''), art=bigger(t.artworkUrl100,300);
+        const apple=esc(t.trackViewUrl||'#'), prev=esc(t.previewUrl||'');
+        return `<div class="track reveal in">
+          <div class="art">
+            <img src="${art}" alt="${name}" loading="lazy" />
+            ${prev?`<button class="play-btn" data-src="${prev}" aria-label="Écouter un extrait"><i>▶</i></button>`:''}
+          </div>
+          <div class="name">${name}</div>
+          <div class="meta">${dateFR(t.releaseDate)}${i===0?' · Nouveau':''}</div>
+          <div class="links">
+            <a href="${apple}" target="_blank" rel="noopener">Apple</a>
+            <a href="${spo(t.trackName||'')}" target="_blank" rel="noopener">Spotify</a>
+            <a href="${ytm(t.trackName||'')}" target="_blank" rel="noopener">YT Music</a>
+          </div>
+        </div>`;
+      }).join('');
+      bindPlay(); observeReveals();
+    }
+
+    loadReleases();
   </script>
 </body>
 </html>
