@@ -1,497 +1,203 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>YOYO EL PATRON — TON REGARD</title>
-<meta name="description" content="Yoyo El Patron — Pas de visage. Que du son. Capuche baissée, Paris néon. Dernière sortie : TON REGARD." />
-<meta property="og:title" content="YOYO EL PATRON" />
-<meta property="og:description" content="Pas de visage. Que du son. Capuche baissée, Paris néon." />
-<meta property="og:image" content="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/0f/39/98/0f3998ea-b9d4-b297-23e2-5ee9a96d9d9c/artwork.jpg/1200x1200bb.jpg" />
-<meta property="og:type" content="music.musician" />
-<link rel="icon" href="favicon.ico" sizes="any" />
-<link rel="icon" type="image/svg+xml" href="favicon.svg" />
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-<link rel="apple-touch-icon" href="apple-touch-icon.png" />
-<meta name="theme-color" content="#06060c" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Yoyo El Patron — Official</title>
+<meta name="description" content="Yoyo El Patron — Rap • Showbiz. Écoute sur Spotify, Apple Music, Deezer et YouTube.">
+<meta name="theme-color" content="#07070a">
+<meta property="og:title" content="Yoyo El Patron">
+<meta property="og:description" content="Rap • Showbiz — Tous les liens officiels.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#06060c;--ink:#f4f3ff;--muted:#9b98c0;
-    --pink:#ff2d75;--cyan:#22d3ee;--violet:#7c3aed;
-    --card:rgba(255,255,255,.04);--stroke:rgba(255,255,255,.10);--radius:20px;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-  a{color:inherit;text-decoration:none}
-  h1,h2,h3{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.02em;line-height:.98;margin:0;text-transform:uppercase}
-  img{display:block;max-width:100%}
-
-  .blob{position:fixed;border-radius:50%;filter:blur(90px);opacity:.5;z-index:0;pointer-events:none;animation:float 18s ease-in-out infinite}
-  .blob.a{width:480px;height:480px;background:var(--pink);top:-120px;left:-100px}
-  .blob.b{width:520px;height:520px;background:var(--violet);top:30%;right:-160px;animation-delay:-6s}
-  .blob.c{width:420px;height:420px;background:var(--cyan);bottom:-160px;left:25%;animation-delay:-11s;opacity:.38}
-  @keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(0,-40px) scale(1.08)}}
-  .grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-
-  .wrap{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:0 22px}
-
-  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:linear-gradient(180deg,rgba(6,6,12,.85),rgba(6,6,12,.35));border-bottom:1px solid var(--stroke)}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;max-width:1100px;margin:0 auto}
-  .brand{font-family:'Anton';font-size:20px;letter-spacing:.08em}
-  .brand span{color:var(--pink)}
-  .nav-links{display:flex;gap:26px;font-size:13px;font-weight:600;color:var(--muted)}
-  .nav-links a:hover{color:#fff}
-  @media(max-width:680px){.nav-links{display:none}}
-
-  header{position:relative;min-height:92vh;display:flex;align-items:center;padding:90px 0 60px}
-  .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;width:100%}
-  @media(max-width:820px){.hero{grid-template-columns:1fr;text-align:center}}
-  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);border:1px solid var(--stroke);padding:7px 14px;border-radius:999px;background:var(--card)}
-  .dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan);animation:pulse 1.6s infinite}
-  @keyframes pulse{50%{opacity:.3}}
-  .title{font-size:clamp(54px,12vw,128px);margin:18px 0 10px;background:linear-gradient(92deg,#fff 10%,var(--pink) 55%,var(--violet) 90%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 60px rgba(255,45,117,.25)}
-  .tagline{font-size:clamp(16px,2.4vw,21px);color:var(--muted);max-width:30ch;margin:0 auto}
-  @media(min-width:821px){.tagline{margin:0}}
-  .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-  @media(max-width:820px){.cta{justify-content:center}}
-  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;transition:transform .15s ease,box-shadow .25s ease;border:1px solid transparent;cursor:pointer}
-  .btn-primary{background:linear-gradient(92deg,var(--pink),var(--violet));color:#fff;box-shadow:0 10px 30px rgba(124,58,237,.35)}
-  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 44px rgba(255,45,117,.45)}
-  .btn-ghost{border-color:var(--stroke);background:var(--card);color:#fff}
-  .btn-ghost:hover{transform:translateY(-3px);border-color:var(--pink)}
-
-  .hero-cover{position:relative;width:min(380px,86%);aspect-ratio:1;border-radius:26px;overflow:hidden;margin:0 auto;border:1px solid var(--stroke);box-shadow:0 30px 90px rgba(124,58,237,.5)}
-  .hero-cover img{width:100%;height:100%;object-fit:cover}
-  .hero-cover .tag{position:absolute;left:14px;top:14px;font-size:11px;font-weight:800;letter-spacing:.14em;color:#fff;background:var(--pink);padding:6px 12px;border-radius:999px}
-
-  section{padding:70px 0;position:relative;z-index:2}
-  .kicker{font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--pink)}
-  .h2{font-size:clamp(30px,6vw,56px);margin:10px 0 30px}
-
-  .featured{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px;align-items:center;background:var(--card);border:1px solid var(--stroke);border-radius:var(--radius);padding:26px;background-image:radial-gradient(800px 300px at 0% 0%,rgba(255,45,117,.14),transparent)}
-  @media(max-width:820px){.featured{grid-template-columns:1fr}}
-  .featured .cover{aspect-ratio:1;border-radius:16px;overflow:hidden;border:1px solid var(--stroke);position:relative}
-  .featured .cover img{width:100%;height:100%;object-fit:cover}
-  .new-badge{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.14em;color:#fff;background:var(--pink);padding:5px 12px;border-radius:999px;margin-bottom:12px}
-
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:18px}
-  .track{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:14px;transition:transform .2s ease,border-color .2s ease}
-  .track:hover{transform:translateY(-6px);border-color:var(--pink)}
-  .art{position:relative;aspect-ratio:1;border-radius:12px;overflow:hidden;margin-bottom:12px}
-  .art img{width:100%;height:100%;object-fit:cover}
-  .play-btn{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.28);opacity:0;transition:opacity .2s;border:0;cursor:pointer}
-  .track:hover .play-btn,.play-btn.playing{opacity:1}
-  .play-btn i{width:52px;height:52px;border-radius:50%;background:rgba(255,45,117,.95);color:#fff;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:20px;box-shadow:0 8px 24px rgba(0,0,0,.45)}
-  .track .name{font-weight:700;font-size:15px}
-  .track .meta{font-size:12px;color:var(--muted)}
-  .links{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
-  .links a{font-size:11.5px;font-weight:600;color:var(--cyan);border:1px solid var(--stroke);padding:4px 10px;border-radius:999px;transition:border-color .18s,color .18s}
-  .links a:hover{border-color:var(--pink);color:#fff}
-
-  .platforms{display:flex;flex-wrap:wrap;gap:14px}
-  .plat{flex:1 1 180px;display:flex;align-items:center;gap:12px;padding:16px 18px;border-radius:14px;background:var(--card);border:1px solid var(--stroke);font-weight:700;transition:transform .18s,border-color .18s}
-  .plat:hover{transform:translateY(-4px);border-color:var(--cyan)}
-  .plat .ic{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff}
-  .plat small{display:block;font-size:11px;font-weight:600;color:var(--muted)}
-
-  #paroles{background:radial-gradient(900px 500px at 50% 0%,rgba(124,58,237,.12),transparent)}
-  .lyrics{max-width:660px;margin:0 auto;text-align:center}
-  .stanza{margin:0 0 30px}
-  .lyric-line{font-weight:700;font-size:clamp(18px,3.8vw,27px);line-height:1.5;color:rgba(244,243,255,.26);transition:color .35s ease,text-shadow .35s ease,transform .35s ease;padding:2px 0}
-  .lyric-line.active{color:#fff;text-shadow:0 0 28px rgba(255,45,117,.55);transform:scale(1.045)}
-  .lyric-note{text-align:center;color:var(--muted);font-size:13px;margin-top:30px}
-  .lyric-hint{color:var(--muted);margin-top:-14px}
-
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
-  .reveal.in{opacity:1;transform:none}
-
-  footer{padding:50px 0 60px;border-top:1px solid var(--stroke);text-align:center;color:var(--muted);font-size:13px}
-  .tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0}
-  .tags span{font-size:12px;color:var(--muted);background:var(--card);border:1px solid var(--stroke);padding:5px 11px;border-radius:999px}
+:root{
+  --bg:#07070a;--panel:rgba(255,255,255,.055);--line:rgba(255,255,255,.10);
+  --text:#f8f8fb;--muted:#9d9da8;--gold:#d7b46a;--pink:#ff2d75;--violet:#7c3aed;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;min-height:100vh;color:var(--text);font-family:Inter,system-ui,sans-serif;
+  background:
+    radial-gradient(900px 600px at 10% -10%,rgba(255,45,117,.20),transparent 60%),
+    radial-gradient(800px 650px at 100% 20%,rgba(124,58,237,.22),transparent 62%),
+    radial-gradient(700px 500px at 50% 100%,rgba(215,180,106,.09),transparent 60%),
+    var(--bg);
+  -webkit-font-smoothing:antialiased;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+a{color:inherit;text-decoration:none}
+.shell{width:min(760px,100%);margin:0 auto;padding:28px 18px 52px}
+.top{display:flex;justify-content:flex-end;min-height:40px}
+.share{
+  width:40px;height:40px;border:1px solid var(--line);border-radius:50%;
+  background:rgba(255,255,255,.04);color:#fff;font-size:17px;cursor:pointer;
+  backdrop-filter:blur(14px);transition:.2s ease;
+}
+.share:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.24)}
+.profile{text-align:center;margin-top:6px}
+.avatar{
+  width:116px;height:116px;margin:0 auto 18px;border-radius:30px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.18);box-shadow:0 22px 60px rgba(0,0,0,.45);
+  background:linear-gradient(145deg,#17171d,#08080b);position:relative;
+}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.avatar:after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);border-radius:inherit}
+.name{
+  font-family:Oswald,Inter,sans-serif;font-size:clamp(34px,8vw,52px);
+  letter-spacing:.07em;line-height:1;text-transform:uppercase;margin:0;
+}
+.handle{margin-top:8px;color:var(--muted);font-size:14px;font-weight:600}
+.bio{margin:18px auto 0;max-width:520px;font-size:16px;line-height:1.55;color:#d8d8df}
+.bio strong{color:#fff}
+.pill{
+  display:inline-flex;align-items:center;gap:8px;margin-top:14px;
+  padding:8px 12px;border-radius:999px;border:1px solid rgba(215,180,106,.28);
+  background:rgba(215,180,106,.07);color:#e6c985;font-size:12px;font-weight:800;
+  letter-spacing:.12em;text-transform:uppercase;
+}
+.pill i{width:6px;height:6px;border-radius:50%;background:#e6c985;box-shadow:0 0 14px #e6c985}
+.links{display:grid;gap:12px;margin-top:28px}
+.link{
+  min-height:64px;padding:12px 16px;border-radius:18px;border:1px solid var(--line);
+  background:rgba(255,255,255,.055);display:grid;grid-template-columns:44px 1fr 28px;
+  align-items:center;text-align:left;backdrop-filter:blur(18px);
+  transition:transform .18s ease,border-color .18s ease,background .18s ease;
+  box-shadow:0 10px 35px rgba(0,0,0,.12);
+}
+.link:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.24);background:rgba(255,255,255,.08)}
+.icon{
+  width:42px;height:42px;border-radius:13px;display:grid;place-items:center;
+  font-weight:900;font-size:18px;color:white;
+}
+.spotify{background:#1DB954}.apple{background:linear-gradient(145deg,#3a3a3f,#050505)}
+.deezer{background:linear-gradient(135deg,#a238ff,#ff2d75)}
+.youtube{background:#ff0033}.tiktok{background:linear-gradient(135deg,#25f4ee 0 35%,#111 35% 65%,#fe2c55 65%)}
+.txt b{display:block;font-size:15px}.txt span{font-size:12px;color:var(--muted);font-weight:500}
+.arrow{font-size:18px;color:#74747f;text-align:center}
+.latest{
+  margin-top:24px;padding:16px;border-radius:24px;border:1px solid var(--line);
+  background:linear-gradient(135deg,rgba(255,45,117,.08),rgba(124,58,237,.08)),rgba(255,255,255,.035);
+  display:grid;grid-template-columns:112px 1fr;gap:16px;align-items:center;
+  box-shadow:0 24px 60px rgba(0,0,0,.16);
+}
+.cover{aspect-ratio:1;border-radius:18px;overflow:hidden;background:#111}
+.cover img{width:100%;height:100%;object-fit:cover;display:block}
+.kicker{font-size:10px;color:#d9b96f;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.latest h2{font-family:Oswald;margin:5px 0 7px;font-size:28px;line-height:1.05;text-transform:uppercase;letter-spacing:.02em}
+.latest p{margin:0;color:var(--muted);font-size:12px}
+.listen{
+  margin-top:12px;display:inline-flex;align-items:center;gap:8px;
+  padding:9px 13px;border-radius:999px;background:#fff;color:#08080b;font-size:12px;font-weight:800
+}
+.section-title{margin:32px 2px 12px;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:#777783}
+.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mini{
+  border:1px solid var(--line);background:rgba(255,255,255,.035);
+  border-radius:16px;overflow:hidden;transition:.18s ease
+}
+.mini:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.22)}
+.mini img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.mini div{padding:10px}
+.mini b{display:block;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mini span{font-size:10px;color:var(--muted)}
+.footer{text-align:center;margin-top:34px;color:#70707a;font-size:11px}
+.footer b{color:#aaa}
+@media(max-width:520px){
+  .shell{padding-top:18px}.latest{grid-template-columns:92px 1fr;padding:13px;gap:13px}
+  .latest h2{font-size:23px}.mini-grid{grid-template-columns:repeat(2,1fr)}
+}
 </style>
 </head>
 <body>
-  <div class="blob a"></div><div class="blob b"></div><div class="blob c"></div>
-  <div class="grain"></div>
-  <audio id="player" preload="none"></audio>
+<main class="shell">
+  <div class="top"><button class="share" id="share" aria-label="Partager">↗</button></div>
 
-  <nav>
-    <div class="nav-in">
-      <div class="brand">YOYO<span>·</span>EL PATRON</div>
-      <div class="nav-links">
-        <a href="#sortie">Dernière sortie</a>
-        <a href="#musique">Musique</a>
-        <a href="#paroles">Paroles</a>
-        <a href="#ecouter">Écouter</a>
-      </div>
-      <a class="btn btn-primary" style="padding:10px 18px;font-size:13px" href="https://t-sml.mtrbio.com/public/smartlink/yoyoelpatron" target="_blank" rel="noopener">▶ Écouter</a>
-    </div>
-  </nav>
+  <section class="profile">
+    <div class="avatar"><img id="avatar" alt="Yoyo El Patron" src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/0f/39/98/0f3998ea-b9d4-b297-23e2-5ee9a96d9d9c/artwork.jpg/600x600bb.jpg"></div>
+    <h1 class="name">Yoyo El Patron</h1>
+    <div class="handle">@yoyo.el.patron</div>
+    <div class="pill"><i></i> Rap • Showbiz</div>
+    <p class="bio"><strong>Pas de visage. Que du son.</strong><br>Musique, clips et dernières sorties — tous les liens officiels.</p>
+  </section>
 
-  <header>
-    <div class="wrap">
-      <div class="hero">
-        <div class="reveal in">
-          <span class="eyebrow"><span class="dot"></span> Nouveau · <span id="latest-name">TON REGARD</span></span>
-          <h1 class="title">YOYO<br>EL PATRON</h1>
-          <p class="tagline">Pas de visage. Que du son.<br>Capuche baissée, Paris néon.</p>
-          <div class="cta">
-            <a class="btn btn-primary" href="https://t-sml.mtrbio.com/public/smartlink/yoyoelpatron" target="_blank" rel="noopener">▶ Écouter partout</a>
-            <a class="btn btn-ghost" href="https://open.spotify.com/artist/6Pjr5HrAGUGmeJ666puvBe" target="_blank" rel="noopener">Spotify ↗</a>
-          </div>
-        </div>
-        <div class="hero-cover reveal in">
-          <span class="tag">DERNIÈRE SORTIE</span>
-          <img id="hero-img" src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/0f/39/98/0f3998ea-b9d4-b297-23e2-5ee9a96d9d9c/artwork.jpg/600x600bb.jpg" alt="Elle est Guaaapaaa — Yoyo El Patron" loading="eager" />
-        </div>
-      </div>
-    </div>
-  </header>
+  <section class="links" aria-label="Plateformes officielles">
+    <a class="link" href="https://open.spotify.com/artist/6Pjr5HrAGUGmeJ666puvBe" target="_blank" rel="noopener">
+      <span class="icon spotify">S</span><span class="txt"><b>Spotify</b><span>Écouter & suivre Yoyo El Patron</span></span><span class="arrow">›</span>
+    </a>
+    <a class="link" href="https://music.apple.com/fr/artist/yoyo-el-patron/1896699539" target="_blank" rel="noopener">
+      <span class="icon apple">♪</span><span class="txt"><b>Apple Music</b><span>Écouter les sorties</span></span><span class="arrow">›</span>
+    </a>
+    <a class="link" href="https://www.deezer.com/fr/artist/391284461" target="_blank" rel="noopener">
+      <span class="icon deezer">D</span><span class="txt"><b>Deezer</b><span>Écouter Yoyo El Patron</span></span><span class="arrow">›</span>
+    </a>
+    <a class="link" href="https://www.youtube.com/channel/UCcfP8X61Wb5dC9HM4ZklNIg" target="_blank" rel="noopener">
+      <span class="icon youtube">▶</span><span class="txt"><b>YouTube</b><span>Clips, audios & nouveautés</span></span><span class="arrow">›</span>
+    </a>
+    <a class="link" href="https://www.tiktok.com/@yoyo.el.patron" target="_blank" rel="noopener">
+      <span class="icon tiktok">♪</span><span class="txt"><b>TikTok</b><span>@yoyo.el.patron</span></span><span class="arrow">›</span>
+    </a>
+  </section>
 
-  <section id="sortie">
-    <div class="wrap">
-      <div class="reveal">
-        <div class="kicker">Dernière sortie</div>
-        <h2 class="h2" id="sortie-title">TON REGARD</h2>
-      </div>
-      <div class="featured reveal">
-        <div class="cover">
-          <img id="featured-img" src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/0f/39/98/0f3998ea-b9d4-b297-23e2-5ee9a96d9d9c/artwork.jpg/600x600bb.jpg" alt="Elle est Guaaapaaa" loading="lazy" />
-        </div>
-        <div>
-          <span class="new-badge">● NOUVEAU SINGLE · 2026</span>
-          <p style="color:var(--muted);margin-top:0">Le dernier titre de Yoyo El Patron — afrotrap mélodique, prod nocturne et refrain qui colle. Disponible sur toutes les plateformes.</p>
-          <div class="cta" style="margin-top:18px">
-            <a class="btn btn-primary" href="https://t-sml.mtrbio.com/public/smartlink/yoyoelpatron" target="_blank" rel="noopener">▶ Écouter maintenant</a>
-            <a class="btn btn-ghost" id="featured-apple" href="https://music.apple.com/us/album/ton-regard/6794783328?i=6794783330&amp;uo=4" target="_blank" rel="noopener">Apple Music ↗</a>
-          </div>
-        </div>
-      </div>
+  <section class="latest" id="latest">
+    <div class="cover"><img id="latest-cover" alt="Dernière sortie"></div>
+    <div>
+      <div class="kicker">Dernière sortie</div>
+      <h2 id="latest-title">Yoyo El Patron</h2>
+      <p id="latest-date">Disponible sur les plateformes</p>
+      <a class="listen" id="latest-link" href="https://music.apple.com/fr/artist/yoyo-el-patron/1896699539" target="_blank" rel="noopener">▶ Écouter maintenant</a>
     </div>
   </section>
 
-  <section id="musique">
-    <div class="wrap">
-      <div class="reveal">
-        <div class="kicker">Discographie</div>
-        <h2 class="h2">La musique</h2>
-      </div>
-      <div class="grid" id="disco-grid">
-        <div class="track reveal in">
-          <div class="art">
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/0f/39/98/0f3998ea-b9d4-b297-23e2-5ee9a96d9d9c/artwork.jpg/300x300bb.jpg" alt="TON REGARD" loading="lazy" />
-            <button class="play-btn" data-src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/59/7e/5f/597e5fdc-fef0-4b1e-f1a5-c2958e38c2c1/mzaf_973108741922439125.plus.aac.p.m4a" aria-label="Écouter un extrait"><i>▶</i></button>
-          </div>
-          <div class="name">TON REGARD</div>
-          <div class="meta">Nouveau single · Nouveau</div>
-          <div class="links">
-            <a href="https://music.apple.com/us/album/ton-regard/6794783328?i=6794783330&amp;uo=4" target="_blank" rel="noopener">Apple</a>
-            <a href="https://open.spotify.com/search/Yoyo%20El%20Patron%20TON%20REGARD" target="_blank" rel="noopener">Spotify</a>
-            <a href="https://music.youtube.com/search?q=Yoyo%20El%20Patron%20TON%20REGARD" target="_blank" rel="noopener">YT Music</a>
-          </div>
-        </div>
-        <div class="track reveal in">
-          <div class="art">
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/6c/57/bc/6c57bcae-6392-74a2-9521-c66029272e2b/artwork.jpg/300x300bb.jpg" alt="DANGER PUBLIC" loading="lazy" />
-            <button class="play-btn" data-src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/01/89/30/018930b2-1d55-8837-a165-0c6dc66fef1b/mzaf_14532537594322521115.plus.aac.p.m4a" aria-label="Écouter un extrait"><i>▶</i></button>
-          </div>
-          <div class="name">DANGER PUBLIC</div>
-          <div class="meta">Single · 24 juil. 2026</div>
-          <div class="links">
-            <a href="https://music.apple.com/us/album/danger-public/6794396562?i=6794396563&amp;uo=4" target="_blank" rel="noopener">Apple</a>
-            <a href="https://open.spotify.com/search/Yoyo%20El%20Patron%20DANGER%20PUBLIC" target="_blank" rel="noopener">Spotify</a>
-            <a href="https://music.youtube.com/search?q=Yoyo%20El%20Patron%20DANGER%20PUBLIC" target="_blank" rel="noopener">YT Music</a>
-          </div>
-        </div>
-        <div class="track reveal in">
-          <div class="art">
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/82/36/35/82363553-4e35-5459-7ec7-a7ad8f554d09/artwork.jpg/300x300bb.jpg" alt="2H17" loading="lazy" />
-            <button class="play-btn" data-src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b9/75/4e/b9754e7c-cf19-16d8-7328-7e80a144d867/mzaf_1141828656360374773.plus.aac.p.m4a" aria-label="Écouter un extrait"><i>▶</i></button>
-          </div>
-          <div class="name">2H17</div>
-          <div class="meta">Single · 24 juil. 2026</div>
-          <div class="links">
-            <a href="https://music.apple.com/us/album/2h17/6794190820?i=6794190821&amp;uo=4" target="_blank" rel="noopener">Apple</a>
-            <a href="https://open.spotify.com/search/Yoyo%20El%20Patron%202H17" target="_blank" rel="noopener">Spotify</a>
-            <a href="https://music.youtube.com/search?q=Yoyo%20El%20Patron%202H17" target="_blank" rel="noopener">YT Music</a>
-          </div>
-        </div>
-        <div class="track reveal in">
-          <div class="art">
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f3/22/b4/f322b4cf-35ac-8134-3349-c5436bf7cd7c/artwork.jpg/300x300bb.jpg" alt="GAMOS TEINTE" loading="lazy" />
-            <button class="play-btn" data-src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b9/6a/8e/b96a8edc-3228-b40e-a4c9-b8d8a1ae7dc7/mzaf_12644732623037198642.plus.aac.p.m4a" aria-label="Écouter un extrait"><i>▶</i></button>
-          </div>
-          <div class="name">GAMOS TEINTE</div>
-          <div class="meta">Single · 23 juil. 2026</div>
-          <div class="links">
-            <a href="https://music.apple.com/us/album/gamos-teinte/6794162452?i=6794162453&amp;uo=4" target="_blank" rel="noopener">Apple</a>
-            <a href="https://open.spotify.com/search/Yoyo%20El%20Patron%20GAMOS%20TEINTE" target="_blank" rel="noopener">Spotify</a>
-            <a href="https://music.youtube.com/search?q=Yoyo%20El%20Patron%20GAMOS%20TEINTE" target="_blank" rel="noopener">YT Music</a>
-          </div>
-        </div>
-        <div class="track reveal in">
-          <div class="art">
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7a/94/73/7a9473cd-76f8-fbb7-e00a-408a9b063a7b/artwork.jpg/300x300bb.jpg" alt="FOU B" loading="lazy" />
-            <button class="play-btn" data-src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/87/f9/c2/87f9c2b6-ca0e-547b-6715-630c44c0012f/mzaf_10379661276066077936.plus.aac.p.m4a" aria-label="Écouter un extrait"><i>▶</i></button>
-          </div>
-          <div class="name">FOU B</div>
-          <div class="meta">Single · 2 juil. 2026</div>
-          <div class="links">
-            <a href="https://music.apple.com/us/album/fou-b/6786984328?i=6786984330&amp;uo=4" target="_blank" rel="noopener">Apple</a>
-            <a href="https://open.spotify.com/search/Yoyo%20El%20Patron%20FOU%20B" target="_blank" rel="noopener">Spotify</a>
-            <a href="https://music.youtube.com/search?q=Yoyo%20El%20Patron%20FOU%20B" target="_blank" rel="noopener">YT Music</a>
-          </div>
-        </div>
-        <div class="track reveal in">
-          <div class="art">
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/20/6d/40/206d4084-300a-5184-d3c4-d524cb831b91/artwork.jpg/300x300bb.jpg" alt="MA COLLINE" loading="lazy" />
-            <button class="play-btn" data-src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5d/6d/dc/5d6ddc3d-9dc4-00d9-bb7d-01573b27b1fd/mzaf_14342323602733258874.plus.aac.p.m4a" aria-label="Écouter un extrait"><i>▶</i></button>
-          </div>
-          <div class="name">MA COLLINE</div>
-          <div class="meta">Single · 29 juin 2026</div>
-          <div class="links">
-            <a href="https://music.apple.com/us/album/ma-colline/6786037112?i=6786037113&amp;uo=4" target="_blank" rel="noopener">Apple</a>
-            <a href="https://open.spotify.com/search/Yoyo%20El%20Patron%20MA%20COLLINE" target="_blank" rel="noopener">Spotify</a>
-            <a href="https://music.youtube.com/search?q=Yoyo%20El%20Patron%20MA%20COLLINE" target="_blank" rel="noopener">YT Music</a>
-          </div>
-        </div>
-        <div class="track reveal in">
-          <div class="art">
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/18/0d/6d/180d6dc7-3e83-4f81-be26-87ac7489dc78/artwork.jpg/300x300bb.jpg" alt="MERCI LE H" loading="lazy" />
-            <button class="play-btn" data-src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/47/fb/f9/47fbf919-ab14-601e-7baa-d7278c1638d7/mzaf_11770917204574459431.plus.aac.p.m4a" aria-label="Écouter un extrait"><i>▶</i></button>
-          </div>
-          <div class="name">MERCI LE H</div>
-          <div class="meta">Single · 21 juin 2026</div>
-          <div class="links">
-            <a href="https://music.apple.com/us/album/merci-le-h/6783249235?i=6783249236&amp;uo=4" target="_blank" rel="noopener">Apple</a>
-            <a href="https://open.spotify.com/search/Yoyo%20El%20Patron%20MERCI%20LE%20H" target="_blank" rel="noopener">Spotify</a>
-            <a href="https://music.youtube.com/search?q=Yoyo%20El%20Patron%20MERCI%20LE%20H" target="_blank" rel="noopener">YT Music</a>
-          </div>
-        </div>
-        <div class="track reveal in">
-          <div class="art">
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/62/77/90/6277904c-11d8-ae47-ce7c-845c28aa6031/artwork.jpg/300x300bb.jpg" alt="ELLE EST GUAAAPAAA" loading="lazy" />
-            <button class="play-btn" data-src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7e/42/0e/7e420e9a-ede3-080a-805e-67dc62ac254c/mzaf_3322757068570211060.plus.aac.p.m4a" aria-label="Écouter un extrait"><i>▶</i></button>
-          </div>
-          <div class="name">ELLE EST GUAAAPAAA</div>
-          <div class="meta">Single · 10 juin 2026</div>
-          <div class="links">
-            <a href="https://music.apple.com/us/album/elle-est-guaaapaaa/6779067225?i=6779067226&amp;uo=4" target="_blank" rel="noopener">Apple</a>
-            <a href="https://open.spotify.com/search/Yoyo%20El%20Patron%20ELLE%20EST%20GUAAAPAAA" target="_blank" rel="noopener">Spotify</a>
-            <a href="https://music.youtube.com/search?q=Yoyo%20El%20Patron%20ELLE%20EST%20GUAAAPAAA" target="_blank" rel="noopener">YT Music</a>
-          </div>
-        </div>
-        <div class="track reveal in">
-          <div class="art">
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e5/c4/01/e5c4019e-b5f4-73a8-231b-d1c2b3c71e93/artwork.jpg/300x300bb.jpg" alt="MA VIE SOUS LE SOLEIL" loading="lazy" />
-            <button class="play-btn" data-src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/62/0c/23/620c2387-702a-d8f2-d4ef-1b10db73328b/mzaf_9027152716129942833.plus.aac.p.m4a" aria-label="Écouter un extrait"><i>▶</i></button>
-          </div>
-          <div class="name">MA VIE SOUS LE SOLEIL</div>
-          <div class="meta">Single · 28 mai 2026</div>
-          <div class="links">
-            <a href="https://music.apple.com/us/album/ma-vie-sous-le-soleil/6773917904?i=6773917905&amp;uo=4" target="_blank" rel="noopener">Apple</a>
-            <a href="https://open.spotify.com/search/Yoyo%20El%20Patron%20MA%20VIE%20SOUS%20LE%20SOLEIL" target="_blank" rel="noopener">Spotify</a>
-            <a href="https://music.youtube.com/search?q=Yoyo%20El%20Patron%20MA%20VIE%20SOUS%20LE%20SOLEIL" target="_blank" rel="noopener">YT Music</a>
-          </div>
-        </div>
-        <div class="track reveal in">
-          <div class="art">
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/42/a1/54/42a15444-850f-84aa-f417-de9b3a21481f/artwork.jpg/300x300bb.jpg" alt="BADGIRL" loading="lazy" />
-            <button class="play-btn" data-src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/11/a7/11/11a7115c-0612-cb08-f630-d44c517466b0/mzaf_17430505588935413742.plus.aac.p.m4a" aria-label="Écouter un extrait"><i>▶</i></button>
-          </div>
-          <div class="name">BADGIRL</div>
-          <div class="meta">Single · 25 mai 2026</div>
-          <div class="links">
-            <a href="https://music.apple.com/us/album/badgirl/6772975957?i=6772975958&amp;uo=4" target="_blank" rel="noopener">Apple</a>
-            <a href="https://open.spotify.com/search/Yoyo%20El%20Patron%20BADGIRL" target="_blank" rel="noopener">Spotify</a>
-            <a href="https://music.youtube.com/search?q=Yoyo%20El%20Patron%20BADGIRL" target="_blank" rel="noopener">YT Music</a>
-          </div>
-        </div>
-        <div class="track reveal in">
-          <div class="art">
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ec/51/b1/ec51b1b0-6f65-bd48-8788-d1ddb0e75a89/artwork.jpg/300x300bb.jpg" alt="K.O" loading="lazy" />
-            <button class="play-btn" data-src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b4/57/26/b45726ef-c5c6-5b65-ede0-fb3e7dbb922a/mzaf_17491325971172469273.plus.aac.p.m4a" aria-label="Écouter un extrait"><i>▶</i></button>
-          </div>
-          <div class="name">K.O</div>
-          <div class="meta">Single · 24 mai 2026</div>
-          <div class="links">
-            <a href="https://music.apple.com/us/album/k-o/6772690240?i=6772690241&amp;uo=4" target="_blank" rel="noopener">Apple</a>
-            <a href="https://open.spotify.com/search/Yoyo%20El%20Patron%20K.O" target="_blank" rel="noopener">Spotify</a>
-            <a href="https://music.youtube.com/search?q=Yoyo%20El%20Patron%20K.O" target="_blank" rel="noopener">YT Music</a>
-          </div>
-        </div>
-        <div class="track reveal in">
-          <div class="art">
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a0/cb/5e/a0cb5eaf-3ebf-842d-8465-6be72c2df4f3/artwork.jpg/300x300bb.jpg" alt="Match nul" loading="lazy" />
-            <button class="play-btn" data-src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/84/55/ee/8455ee24-1f3b-96a6-86b0-7f487de3b672/mzaf_7541177427062900981.plus.aac.p.m4a" aria-label="Écouter un extrait"><i>▶</i></button>
-          </div>
-          <div class="name">Match nul</div>
-          <div class="meta">Single · 15 mai 2026</div>
-          <div class="links">
-            <a href="https://music.apple.com/us/album/match-nul/6770034147?i=6770034148&amp;uo=4" target="_blank" rel="noopener">Apple</a>
-            <a href="https://open.spotify.com/search/Yoyo%20El%20Patron%20Match%20nul" target="_blank" rel="noopener">Spotify</a>
-            <a href="https://music.youtube.com/search?q=Yoyo%20El%20Patron%20Match%20nul" target="_blank" rel="noopener">YT Music</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="section-title">Dernières sorties</div>
+  <section class="mini-grid" id="releases"></section>
 
-  <section id="paroles">
-    <div class="wrap">
-      <div class="reveal">
-        <div class="kicker">Paroles</div>
-        <h2 class="h2">Elle est Guapa</h2>
-        <p class="lyric-hint reveal">Faites défiler — la ligne en cours s'illumine 🎤</p>
-      </div>
-      <div class="lyrics">
-        <div class="stanza reveal"><div class="lyric-line">Mmh</div><div class="lyric-line">Elle est guapaa</div><div class="lyric-line">J'la vois venir de loin</div></div>
-        <div class="stanza reveal"><div class="lyric-line">Elle est guapaa, guapaa</div><div class="lyric-line">Elle veut la vie qu'j'ai pas</div><div class="lyric-line">Elle dit qu'elle m'aime, j'y crois pas</div><div class="lyric-line">Mais quand elle part, j'suis pas là</div></div>
-        <div class="stanza reveal"><div class="lyric-line">Elle est guapaa, guapaa</div><div class="lyric-line">Elle veut du love et des dégâts</div><div class="lyric-line">Elle veut la bague, elle veut l'éclat</div><div class="lyric-line">Moi j'veux la paix, j'veux les lovés là</div></div>
-        <div class="stanza reveal"><div class="lyric-line">Capuche basse, j'rentre pas dans l'détail</div><div class="lyric-line">J'ai vu des traîtres sourire dans l'bétail</div><div class="lyric-line">Elle veut Chanel, elle veut dîner tard</div><div class="lyric-line">Moi j'compte les jours, j'compte les retards</div></div>
-        <div class="stanza reveal"><div class="lyric-line">J'ai mis du noir sur mes sentiments</div><div class="lyric-line">J'parle avec Hashem quand c'est trop violent</div><div class="lyric-line">J'ai pas changé, j'suis devenu prudent</div><div class="lyric-line">Ils veulent ma chute, j'les vois lentement</div></div>
-        <div class="stanza reveal"><div class="lyric-line">Elle dit Yoyo, pourquoi t'es distant</div><div class="lyric-line">J'ai trop donné, j'ai perdu du temps</div><div class="lyric-line">J'ai vu des frères devenir des gens</div><div class="lyric-line">Qui vendent ton nom pour payer leur plan</div></div>
-        <div class="stanza reveal"><div class="lyric-line">Elle est jolie mais elle sait mentir</div><div class="lyric-line">Elle fait la douce puis elle sait partir</div><div class="lyric-line">Moi j'suis bloqué entre fuir et bâtir</div><div class="lyric-line">J'veux plus souffrir, j'veux juste investir</div></div>
-        <div class="stanza reveal"><div class="lyric-line">Elle est guapaa, guapaa</div><div class="lyric-line">Elle veut la vie qu'j'ai pas</div><div class="lyric-line">Elle dit qu'elle m'aime, j'y crois pas</div><div class="lyric-line">Mais quand elle part, j'suis pas là</div></div>
-        <div class="stanza reveal"><div class="lyric-line">J'ai pas l'temps pour les débats</div><div class="lyric-line">J'ai des factures, des soldats</div><div class="lyric-line">Des souvenirs dans les bras</div><div class="lyric-line">Et des ennemis sous contrat</div></div>
-        <div class="stanza reveal"><div class="lyric-line">J'fais pas le beau, j'fais le nécessaire</div><div class="lyric-line">J'ai trop marché dans le désert</div><div class="lyric-line">Elle veut mon nom dans son univers</div><div class="lyric-line">Moi j'veux sortir ma mère de l'hiver</div></div>
-        <div class="stanza reveal"><div class="lyric-line">J'suis pas ton ex, j'suis pas leur copie</div><div class="lyric-line">J'ai trop d'cicatrices sous le hoodie</div><div class="lyric-line">Elle veut ma vie mais pas mes nuits</div><div class="lyric-line">Elle veut le trône mais pas l'ennui</div></div>
-        <div class="stanza reveal"><div class="lyric-line">Guapaa, elle danse quand ça va mal</div><div class="lyric-line">Elle sourit quand j'perds le signal</div><div class="lyric-line">Elle sait qu'mon cœur est animal</div><div class="lyric-line">J'l'aime en silence, c'est paranormal</div></div>
-        <div class="stanza reveal"><div class="lyric-line">Elle est guapaa</div><div class="lyric-line">Mais moi j'suis cassé</div><div class="lyric-line">Elle veut m'aimer</div><div class="lyric-line">Mais j'sais pas rester</div></div>
-        <div class="stanza reveal"><div class="lyric-line">Elle est guapaa</div><div class="lyric-line">J'peux pas nier</div><div class="lyric-line">Mais dans ma tête</div><div class="lyric-line">Tout est grillé</div></div>
-        <div class="stanza reveal"><div class="lyric-line">Elle est guapaa, guapaa</div><div class="lyric-line">Elle veut la vie qu'j'ai pas</div><div class="lyric-line">Elle dit qu'elle m'aime, j'y crois pas</div><div class="lyric-line">Mais quand elle part, j'suis pas là</div></div>
-        <div class="stanza reveal"><div class="lyric-line">Guapaa</div><div class="lyric-line">Mais dangereuse</div><div class="lyric-line">Jolie dans l'noir</div><div class="lyric-line">Trop coûteuse</div></div>
-        <div class="stanza reveal"><div class="lyric-line">Yoyo El Patron</div><div class="lyric-line">Capuche basse</div><div class="lyric-line">J'la regarde partir</div><div class="lyric-line">Et j'efface</div></div>
-      </div>
-      <p class="lyric-note">🎶 Bientôt en karaoké synchronisé sur Spotify &amp; Instagram (via Musixmatch / DistroKid Lyric Blaster).</p>
-    </div>
-  </section>
+  <footer class="footer"><b>YOYO EL PATRON</b><br>© 2026 — Liens officiels</footer>
+</main>
 
-  <section id="ecouter">
-    <div class="wrap">
-      <div class="reveal">
-        <div class="kicker">Streaming</div>
-        <h2 class="h2">Écouter partout</h2>
-      </div>
-      <div class="reveal" style="margin-bottom:22px">
-        <iframe style="border-radius:16px;border:1px solid var(--stroke)" src="https://open.spotify.com/embed/artist/6Pjr5HrAGUGmeJ666puvBe?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      </div>
-      <div class="platforms">
-        <a class="plat reveal" href="https://t-sml.mtrbio.com/public/smartlink/yoyoelpatron" target="_blank" rel="noopener"><span class="ic" style="background:linear-gradient(135deg,var(--pink),var(--violet))">★</span><div>Tous les liens<small>Smartlink officiel</small></div></a>
-        <a class="plat reveal" href="https://open.spotify.com/artist/6Pjr5HrAGUGmeJ666puvBe" target="_blank" rel="noopener"><span class="ic" style="background:#1db954">♫</span><div>Spotify<small>Écouter & suivre</small></div></a>
-        <a class="plat reveal" href="https://music.apple.com/fr/artist/yoyo-el-patron/1896699539" target="_blank" rel="noopener"><span class="ic" style="background:linear-gradient(135deg,#fa57c1,#ff5e3a)"></span><div>Apple Music<small>Écouter</small></div></a>
-        <a class="plat reveal" href="https://www.deezer.com/fr/artist/391284461" target="_blank" rel="noopener"><span class="ic" style="background:#a238ff">♪</span><div>Deezer<small>Écouter</small></div></a>
-        <a class="plat reveal" href="https://www.youtube.com/channel/UCcfP8X61Wb5dC9HM4ZklNIg" target="_blank" rel="noopener"><span class="ic" style="background:#ff0000">▶</span><div>YouTube<small>Clips & audios</small></div></a>
-      </div>
-    </div>
-  </section>
+<script>
+const ARTIST_ID='1896699539';
+const defaultArt='https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/0f/39/98/0f3998ea-b9d4-b297-23e2-5ee9a96d9d9c/artwork.jpg/600x600bb.jpg';
+const bigger=(u,s)=>u?u.replace('100x100bb',s+'x'+s+'bb'):defaultArt;
+const fmt=(d)=>{try{return new Intl.DateTimeFormat('fr-FR',{day:'numeric',month:'short',year:'numeric'}).format(new Date(d))}catch{return ''}};
+document.getElementById('latest-cover').src=defaultArt;
 
-  <footer>
-    <div class="wrap">
-      <div class="brand" style="font-size:24px;margin-bottom:6px">YOYO<span style="color:var(--pink)">·</span>EL PATRON</div>
-      <p style="margin:0">Pas de visage. Que du son. Capuche baissée, Paris néon.</p>
-      <div class="tags"><span>#rapfr</span><span>#afrotrap</span><span>#afrotrapmélodique</span><span>#paris</span><span>#yoyoelpatron</span><span>#rapfr2026</span></div>
-      <p><a href="https://t-sml.mtrbio.com/public/smartlink/yoyoelpatron" target="_blank" rel="noopener" style="color:var(--cyan)">Tous les liens →</a></p>
-      <p style="opacity:.6;margin-top:18px">© 2026 Yoyo El Patron</p>
-    </div>
-  </footer>
-
-  <script>
-    // ---- Apparition au scroll ----
-    const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-    const observeReveals=()=>document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
-    observeReveals();
-
-    // ---- Karaoké : la ligne au centre s'illumine ----
-    const ly=new IntersectionObserver((es)=>es.forEach(e=>{e.target.classList.toggle('active', e.isIntersecting);}),{rootMargin:'-48% 0px -48% 0px',threshold:0});
-    document.querySelectorAll('.lyric-line').forEach(l=>ly.observe(l));
-
-    // ---- Lecteur d'extraits (30s) ----
-    const player=document.getElementById('player');
-    let current=null;
-    function bindPlay(){
-      document.querySelectorAll('.play-btn').forEach(btn=>{
-        if(btn._bound) return; btn._bound=1;
-        btn.addEventListener('click',()=>{
-          const src=btn.getAttribute('data-src');
-          if(!src) return;
-          if(current===btn && !player.paused){player.pause();btn.classList.remove('playing');btn.querySelector('i').textContent='▶';return;}
-          if(current && current!==btn){current.classList.remove('playing');current.querySelector('i').textContent='▶';}
-          player.src=src;player.play().catch(()=>{});
-          btn.classList.add('playing');btn.querySelector('i').textContent='⏸';current=btn;
-        });
-      });
+async function load(){
+  try{
+    const r=await fetch('https://itunes.apple.com/lookup?id='+ARTIST_ID+'&entity=song&sort=recent&limit=24',{cache:'no-store'});
+    const j=await r.json();
+    const seen=new Set(),tracks=[];
+    for(const t of (j.results||[])){
+      if(t.wrapperType!=='track' || !t.trackName) continue;
+      const k=t.trackName.toLowerCase().trim();
+      if(seen.has(k)) continue;
+      seen.add(k);tracks.push(t);
     }
-    bindPlay();
-    player.addEventListener('ended',()=>{if(current){current.classList.remove('playing');current.querySelector('i').textContent='▶';}});
+    tracks.sort((a,b)=>new Date(b.releaseDate)-new Date(a.releaseDate));
+    if(!tracks.length) return;
+    const t=tracks[0], art=bigger(t.artworkUrl100,600);
+    document.getElementById('avatar').src=art;
+    document.getElementById('latest-cover').src=art;
+    document.getElementById('latest-title').textContent=t.trackName;
+    document.getElementById('latest-date').textContent='Single · '+fmt(t.releaseDate);
+    document.getElementById('latest-link').href=t.trackViewUrl||'#';
+    document.title='Yoyo El Patron — '+t.trackName;
+    const g=document.getElementById('releases');
+    g.innerHTML=tracks.slice(0,6).map(x=>'<a class="mini" href="'+(x.trackViewUrl||'#')+'" target="_blank" rel="noopener"><img src="'+bigger(x.artworkUrl100,300)+'" alt="'+x.trackName.replace(/"/g,'&quot;')+'"><div><b>'+x.trackName+'</b><span>'+fmt(x.releaseDate)+'</span></div></a>').join('');
+  }catch(e){}
+}
+load();
 
-    // ---- AUTO-UPDATE : sorties récupérées en direct depuis l'API iTunes (CORS ok) ----
-    // Pas de rebuild ni de maintenance : à chaque visite, la page lit tes dernières
-    // sorties Apple Music/iTunes et met à jour la « dernière sortie » + la discographie.
-    const ARTIST_ID='1896699539';
-    const spo=n=>'https://open.spotify.com/search/'+encodeURIComponent('Yoyo El Patron '+n);
-    const ytm=n=>'https://music.youtube.com/search?q='+encodeURIComponent('Yoyo El Patron '+n);
-    const bigger=(u,s)=>u?u.replace('100x100bb',s+'x'+s+'bb'):'';
-    const esc=s=>(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-    const MOIS=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
-    const dateFR=d=>{const dt=new Date(d);return (d&&!isNaN(dt))?`Single · ${dt.getDate()} ${MOIS[dt.getMonth()]} ${dt.getFullYear()}`:'Single';};
-
-    async function loadReleases(){
-      try{
-        const res=await fetch(`https://itunes.apple.com/lookup?id=${ARTIST_ID}&entity=song&sort=recent&limit=40`,{cache:'no-store'});
-        const data=await res.json();
-        const seen=new Set(), tracks=[];
-        for(const t of (data.results||[])){
-          if(t.kind!=='song'&&t.wrapperType!=='track') continue;
-          const key=(t.trackName||'').toLowerCase().trim();
-          if(!key||seen.has(key)) continue;
-          seen.add(key); tracks.push(t);
-        }
-        if(!tracks.length) return;               // secours : on garde le contenu statique
-        renderLatest(tracks[0]);
-        renderGrid(tracks.slice(0,12));
-      }catch(e){ /* hors-ligne / bloqué -> le HTML statique reste affiché */ }
-    }
-
-    function renderLatest(t){
-      const name=t.trackName||'', cover=bigger(t.artworkUrl100,600), apple=t.trackViewUrl||'#';
-      const set=(id,fn)=>{const el=document.getElementById(id); if(el) fn(el);};
-      set('latest-name',el=>el.textContent=name);
-      set('sortie-title',el=>el.textContent=name);
-      set('hero-img',el=>{if(cover){el.src=cover;el.alt=name;}});
-      set('featured-img',el=>{if(cover){el.src=cover;el.alt=name;}});
-      set('featured-apple',el=>el.href=apple);
-      if(name) document.title=`YOYO EL PATRON — ${name}`;
-    }
-
-    function renderGrid(tracks){
-      const g=document.getElementById('disco-grid'); if(!g) return;
-      g.innerHTML=tracks.map((t,i)=>{
-        const name=esc(t.trackName||''), art=bigger(t.artworkUrl100,300);
-        const apple=esc(t.trackViewUrl||'#'), prev=esc(t.previewUrl||'');
-        return `<div class="track reveal in">
-          <div class="art">
-            <img src="${art}" alt="${name}" loading="lazy" />
-            ${prev?`<button class="play-btn" data-src="${prev}" aria-label="Écouter un extrait"><i>▶</i></button>`:''}
-          </div>
-          <div class="name">${name}</div>
-          <div class="meta">${dateFR(t.releaseDate)}${i===0?' · Nouveau':''}</div>
-          <div class="links">
-            <a href="${apple}" target="_blank" rel="noopener">Apple</a>
-            <a href="${spo(t.trackName||'')}" target="_blank" rel="noopener">Spotify</a>
-            <a href="${ytm(t.trackName||'')}" target="_blank" rel="noopener">YT Music</a>
-          </div>
-        </div>`;
-      }).join('');
-      bindPlay(); observeReveals();
-    }
-
-    loadReleases();
-  </script>
+document.getElementById('share').addEventListener('click',async()=>{
+  const data={title:'Yoyo El Patron',text:'Rap • Showbiz',url:location.href};
+  try{if(navigator.share){await navigator.share(data)}else{await navigator.clipboard.writeText(location.href);document.getElementById('share').textContent='✓';setTimeout(()=>document.getElementById('share').textContent='↗',1400)}}catch(e){}
+});
+</script>
 </body>
 </html>
